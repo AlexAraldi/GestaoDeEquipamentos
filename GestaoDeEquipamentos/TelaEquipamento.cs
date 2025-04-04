@@ -22,9 +22,9 @@
                 Console.WriteLine("--------------------------------------------");
 
                 Console.Write("Digite um opção válida: ");
-                string opcaoEscolhida = Console.ReadLine();
+                string opcaoEscolhida = Console.ReadLine()!;
 
-                return opcaoEscolhida;
+                return opcaoEscolhida!;
             }
 
             public void CadastrarEquipamento()
@@ -40,10 +40,10 @@
                 Console.WriteLine();
 
                 Console.Write("Digite o nome do equipamento: ");
-                string nome = Console.ReadLine();
+                string nome = Console.ReadLine()!;
 
                 Console.Write("Digite o nome do fabricante equipamento: ");
-                string fabricante = Console.ReadLine();
+                string fabricante = Console.ReadLine()!;
 
                 Console.Write("Digite o preço de aquisição R$ ");
                 decimal precoAquisicao = Convert.ToDecimal(Console.ReadLine());
@@ -75,10 +75,10 @@
                 Console.WriteLine();
 
                 Console.Write("Digite o nome do equipamento: ");
-                string nome = Console.ReadLine();
+                string nome = Console.ReadLine()!;
 
                 Console.Write("Digite o nome do fabricante equipamento: ");
-                string fabricante = Console.ReadLine();
+                string fabricante = Console.ReadLine()!;
 
                 Console.Write("Digite o preço de aquisição R$ ");
                 decimal precoAquisicao = Convert.ToDecimal(Console.ReadLine());
@@ -138,7 +138,7 @@
 
                     else if (equipamentos[i].Id == idSelecionado)
                     {
-                        equipamentos[i] = null;
+                        equipamentos[i] = null!;
                         conseguiuExcluir = true;
                     }
                 }

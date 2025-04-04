@@ -1,5 +1,4 @@
-﻿using static GestaoDeEquipamentos.Program;
-
+﻿
 namespace GestaoDeEquipamentos.ConsoleApp
 {
     internal partial class Program
