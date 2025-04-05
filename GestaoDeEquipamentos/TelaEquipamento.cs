@@ -9,16 +9,14 @@
 
             public string ApresentarMenu()
             {
-                Console.Clear();
-                Console.WriteLine("--------------------------------------------");
-                Console.WriteLine("Gestão de Equipamentos");
-                Console.WriteLine("--------------------------------------------");
+                Cabecalho();
 
                 Console.WriteLine("Escolha a operação desejada:");
                 Console.WriteLine("1 - Cadastro de Equipamento");
                 Console.WriteLine("2 - Edição de Equipamento");
                 Console.WriteLine("3 - Exclusão de Equipamento");
                 Console.WriteLine("4 - Visualização de Equipamentos");
+                Console.WriteLine("5 - Abrir Chamado");
                 Console.WriteLine("--------------------------------------------");
 
                 Console.Write("Digite um opção válida: ");
@@ -27,12 +25,17 @@
                 return opcaoEscolhida!;
             }
 
-            public void CadastrarEquipamento()
+            private static void Cabecalho()
             {
                 Console.Clear();
                 Console.WriteLine("--------------------------------------------");
                 Console.WriteLine("Gestão de Equipamentos");
                 Console.WriteLine("--------------------------------------------");
+            }
+
+            public void CadastrarEquipamento()
+            {
+                Cabecalho();
 
                 Console.WriteLine("Cadastrando Equipamento...");
                 Console.WriteLine("--------------------------------------------");
@@ -59,10 +62,7 @@
 
             public void EditarEquipamento()
             {
-                Console.Clear();
-                Console.WriteLine("--------------------------------------------");
-                Console.WriteLine("Gestão de Equipamentos");
-                Console.WriteLine("--------------------------------------------");
+                Cabecalho();
 
                 Console.WriteLine("Editando Equipamento...");
                 Console.WriteLine("--------------------------------------------");
@@ -117,10 +117,7 @@
 
             public void ExcluirEquipamento()
             {
-                Console.Clear();
-                Console.WriteLine("--------------------------------------------");
-                Console.WriteLine("Gestão de Equipamentos");
-                Console.WriteLine("--------------------------------------------");
+                Cabecalho();
 
                 Console.WriteLine("Excluindo Equipamento...");
                 Console.WriteLine("--------------------------------------------");
@@ -157,10 +154,7 @@
             {
                 if (exibirTitulo)
                 {
-                    Console.Clear();
-                    Console.WriteLine("--------------------------------------------");
-                    Console.WriteLine("Gestão de Equipamentos");
-                    Console.WriteLine("--------------------------------------------");
+                    Cabecalho();
 
                     Console.WriteLine("Visualizando Equipamentos...");
                     Console.WriteLine("--------------------------------------------");

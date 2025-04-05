@@ -2,20 +2,29 @@
 {
     internal partial class Program
     {
-        public static class GeradorIds
+        public class GeradorIds
         {
-            public static int IdEquipamentos = 0;
+            public int IdEquipamentos = 0;
 
-            public static int GerarIdEquipamento()
+            public int GerarIdEquipamento()
             {
                 IdEquipamentos++;
 
                 return IdEquipamentos;
             }
 
-            public static Guid GerarGuidEquipamento()
+            public Guid GerarGuidEquipamento()
             {
                 return Guid.NewGuid();
+            }
+
+
+            public int IdChamado = 0;
+            public int GerarIDChamado()
+            {
+                IdChamado++;
+
+                return IdChamado;
             }
         }
     }

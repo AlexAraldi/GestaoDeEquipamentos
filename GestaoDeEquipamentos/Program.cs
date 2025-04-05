@@ -1,4 +1,5 @@
 ﻿
+
 namespace GestaoDeEquipamentos.ConsoleApp
 {
     internal partial class Program
@@ -6,6 +7,7 @@ namespace GestaoDeEquipamentos.ConsoleApp
         static void Main(string[] args)
         {
             TelaEquipamento telaEquipamento = new TelaEquipamento();
+            TelaChamado telaChamado = new TelaChamado();
 
             while (true)
             {
@@ -27,6 +29,10 @@ namespace GestaoDeEquipamentos.ConsoleApp
 
                     case "4":
                         telaEquipamento.VisualizarEquipamentos(true);
+                        break;
+
+                    case "5":
+                        telaChamado.AbrirChamado();
                         break;
 
                     default:
