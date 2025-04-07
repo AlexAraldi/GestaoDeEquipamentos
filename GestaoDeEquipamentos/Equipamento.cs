@@ -13,7 +13,6 @@
             Fabricante = fabricante;
             PrecoAquisicao = precoAquisicao;
             DataFabricacao = dataFabricacao;
-            TipoChamado = tipoChamado;
         }
 
         public string ObterNumeroSerie()
