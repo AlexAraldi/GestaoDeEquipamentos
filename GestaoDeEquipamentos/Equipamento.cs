@@ -7,13 +7,13 @@
         public string Fabricante;
         public decimal PrecoAquisicao;
         public DateTime DataFabricacao;
-
         public Equipamento(string nome, string fabricante, decimal precoAquisicao, DateTime dataFabricacao)
         {
             Nome = nome;
             Fabricante = fabricante;
             PrecoAquisicao = precoAquisicao;
             DataFabricacao = dataFabricacao;
+            TipoChamado = tipoChamado;
         }
 
         public string ObterNumeroSerie()

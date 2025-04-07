@@ -25,7 +25,7 @@
                 return opcaoEscolhida!;
             }
 
-            private static void Cabecalho()
+            public void Cabecalho()
             {
                 Console.Clear();
                 Console.WriteLine("--------------------------------------------");
@@ -181,6 +181,9 @@
 
                 Console.WriteLine();
             }
+
+            
+
         }
     }
 }

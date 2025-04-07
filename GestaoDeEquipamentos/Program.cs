@@ -9,6 +9,8 @@ namespace GestaoDeEquipamentos.ConsoleApp
             TelaEquipamento telaEquipamento = new TelaEquipamento();
             TelaChamado telaChamado = new TelaChamado();
 
+            
+
             while (true)
             {
                 string opcaoEscolhida = telaEquipamento.ApresentarMenu();

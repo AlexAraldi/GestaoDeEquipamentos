@@ -18,14 +18,6 @@
                 return Guid.NewGuid();
             }
 
-
-            public int IdChamado = 0;
-            public int GerarIDChamado()
-            {
-                IdChamado++;
-
-                return IdChamado;
-            }
         }
     }
 }
