@@ -1,4 +1,7 @@
-﻿namespace GestaoDeEquipamentos.ConsoleApp.ModuloChamado;
+﻿//importação de pacotes
+using GestaoDeEquipamentos.ConsoleApp.ModuloEquipamento;
+
+namespace GestaoDeEquipamentos.ConsoleApp.ModuloChamado;
 
 internal class Chamado
 {

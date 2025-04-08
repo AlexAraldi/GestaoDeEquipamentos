@@ -1,4 +1,6 @@
-﻿namespace GestaoDeEquipamentos.ConsoleApp.ModuloEquipamento;
+﻿using GestaoDeEquipamentos.ConsoleApp.Compartilhado;
+
+namespace GestaoDeEquipamentos.ConsoleApp.ModuloEquipamento;
 
 public class TelaEquipamento
 {
@@ -53,7 +55,7 @@ public class TelaEquipamento
         DateTime dataFabricacao = Convert.ToDateTime(Console.ReadLine());
 
         Equipamento novoEquipamento = new Equipamento(nome, fabricante, precoAquisicao, dataFabricacao);
-        novoEquipamento.Id = gerarIds.GerarIdEquipamento();
+        novoEquipamento.Id = GeradorIds.GerarIdEquipamento();
 
         equipamentos[contadorEquipamentos++] = novoEquipamento;
     }
