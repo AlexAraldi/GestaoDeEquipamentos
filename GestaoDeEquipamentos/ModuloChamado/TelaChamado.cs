@@ -1,26 +1,23 @@
-﻿
-using System.Runtime.Intrinsics.X86;
+﻿namespace GestaoDeEquipamentos.ConsoleApp.ModuloChamado;
 
-namespace GestaoDeEquipamentos
+class TelaChamado
 {
-    class TelaChamado
+    public void AbrirChamado()
     {
-        public void AbrirChamado()
-        {
 
-            Console.WriteLine("Abrir Chamado...");
-            Console.WriteLine("--------------------------------------------");
+        Console.WriteLine("Abrir Chamado...");
+        Console.WriteLine("--------------------------------------------");
 
-            Console.Write("Digite o ID do registro que deseja selecionar: ");
-            int idSelecionado = Convert.ToInt32(Console.ReadLine());
+        Console.Write("Digite o ID do registro que deseja selecionar: ");
+        int idSelecionado = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine();
+        Console.WriteLine();
 
-            Console.Write("Relate o problema que está ocorrendo: ");
-            string tipoDoChamado = Console.ReadLine()!;
+        Console.Write("Relate o problema que está ocorrendo: ");
+        string tipoDoChamado = Console.ReadLine()!;
 
-            Console.WriteLine();
-            Console.WriteLine("O chamado foi aberto!");
-        }
+        Console.WriteLine();
+        Console.WriteLine("O chamado foi aberto!");
     }
+
 }
