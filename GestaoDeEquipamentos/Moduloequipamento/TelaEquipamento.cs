@@ -1,4 +1,4 @@
-﻿namespace GestaoDeEquipamentos.ConsoleApp.ModuloEquipamento
+﻿namespace GestaoDeEquipamentos.ConsoleApp
 {
     internal partial class Program
     {
