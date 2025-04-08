@@ -7,6 +7,7 @@ namespace GestaoDeEquipamentos.ConsoleApp
         static void Main(string[] args)
         {
             TelaEquipamento telaEquipamento = new TelaEquipamento();
+
             TelaChamado telaChamado = new TelaChamado();
 
             

@@ -4,6 +4,7 @@
     {
         public class TelaEquipamento
         {
+            public GeradorIds gerarIds = new GeradorIds(); 
             public Equipamento[] equipamentos = new Equipamento[100];
             public int contadorEquipamentos = 0;
 
@@ -55,7 +56,7 @@
                 DateTime dataFabricacao = Convert.ToDateTime(Console.ReadLine());
 
                 Equipamento novoEquipamento = new Equipamento(nome, fabricante, precoAquisicao, dataFabricacao);
-                novoEquipamento.Id = GeradorIds.GerarIdEquipamento();
+                novoEquipamento.Id = gerarIds.GerarIdEquipamento();
 
                 equipamentos[contadorEquipamentos++] = novoEquipamento;
             }

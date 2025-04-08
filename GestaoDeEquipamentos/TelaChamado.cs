@@ -5,25 +5,6 @@ namespace GestaoDeEquipamentos
 {
     class TelaChamado
     {
-        //  Deve ter um identificador único(Id);
-        //• Deve ter a título do chamado;
-        //• Deve ter a descrição do chamado;
-        //• Deve ter um equipamento;
-        //• Deve ter uma data de abertura;
-
-
-        public string tipoDoChamado;
-        public string descricaoDoChamado;
-        public string equipamentoDoChamado;
-        public string dataDoChamado;
-        public int IdChamado = 0;
-        public int GerarIDChamado()
-        {
-            IdChamado++;
-
-            return IdChamado;
-        }
-
         public void AbrirChamado()
         {
 

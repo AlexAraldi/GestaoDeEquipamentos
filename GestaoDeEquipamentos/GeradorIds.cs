@@ -5,6 +5,8 @@
         public class GeradorIds
         {
             public int IdEquipamentos = 0;
+            public int IdChamado = 0;
+
 
             public int GerarIdEquipamento()
             {
@@ -12,12 +14,14 @@
 
                 return IdEquipamentos;
             }
-
-            public Guid GerarGuidEquipamento()
+            public int GerarIDChamado()
             {
-                return Guid.NewGuid();
+                IdChamado++;
+
+                return IdChamado;
             }
 
         }
+
     }
 }
