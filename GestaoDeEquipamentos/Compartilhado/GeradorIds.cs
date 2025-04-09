@@ -1,20 +1,29 @@
 ﻿namespace GestaoDeEquipamentos.ConsoleApp.Compartilhado;
 
-public class GeradorIds
-{
-    public static int IdEquipamentos = 0;
-    public static int IdChamado = 0;
-
-    public static int GerarIdEquipamento()
+    public static class GeradorIds
     {
-        IdEquipamentos++;
+        public static int IdFabricantes = 0;
+        public static int IdEquipamentos = 0;
+        public static int IdChamados = 0;
 
-        return IdEquipamentos;
-    }
-    public static int GerarIDChamado()
-    {
-        IdChamado++;
+        public static int GerarIdEquipamento()
+        {
+            IdEquipamentos++;
 
-        return IdChamado;
+            return IdEquipamentos;
+        }
+
+        public static int GerarIdChamado()
+        {
+            IdChamados++;
+
+            return IdChamados;
+        }
+
+        public static int GerarIdFabricante()
+        {
+            IdFabricantes++;
+
+            return IdFabricantes;
+        }
     }
-}

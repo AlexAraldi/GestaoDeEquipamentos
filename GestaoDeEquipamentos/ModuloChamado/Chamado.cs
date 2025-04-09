@@ -1,29 +1,27 @@
-﻿//importação de pacotes
-using GestaoDeEquipamentos.ConsoleApp.ModuloEquipamento;
+﻿using GestaoDeEquipamentos.ConsoleApp.ModuloEquipamento;
 
 namespace GestaoDeEquipamentos.ConsoleApp.ModuloChamado;
 
-internal class Chamado
+public class Chamado
 {
-    public int id;
-    public string tituloChamado;
-    public string descricaoChamado;
-    public Equipamento equipamento;
-    public DateTime dataAbertura;
+    public int Id;
+    public string Titulo;
+    public string Descricao;
+    public Equipamento Equipamento;
+    public DateTime DataAbertura;
 
-    public Chamado(string tituloChamado, string descricaoChamado, Equipamento equipamento)
+    public Chamado(string titulo, string descricao, Equipamento equipamento)
     {
-        this.tituloChamado = tituloChamado;
-        this.descricaoChamado = descricaoChamado;
-        this.equipamento = equipamento;
-        dataAbertura = DateTime.Now;
+        Titulo = titulo;
+        Descricao = descricao;
+        Equipamento = equipamento;
+        DataAbertura = DateTime.Now;
     }
 
     public int ObterTempoDecorrido()
     {
-        TimeSpan diferencaTempo = DateTime.Now .Subtract(dataAbertura);
+        TimeSpan diferencaTempo = DateTime.Now.Subtract(DataAbertura);
+
         return diferencaTempo.Days;
     }
-    
-
 }

@@ -1,41 +1,81 @@
-﻿
-using GestaoDeEquipamentos.ConsoleApp.ModuloEquipamento;
+﻿using GestaoDeEquipamentos.ConsoleApp.Compartilhado;
 using GestaoDeEquipamentos.ConsoleApp.ModuloChamado;
-using GestaoDeEquipamentos.ConsoleApp.Compartilhado;
+using GestaoDeEquipamentos.ConsoleApp.ModuloEquipamento;
+using GestaoDeEquipamentos.ModuloFabricante;
 
 namespace GestaoDeEquipamentos.ConsoleApp;
 
-internal partial class Program
+class Program
 {
-
     static void Main(string[] args)
     {
+        RepositorioFabricante repositorioFabricante = new RepositorioFabricante();
+        RepositorioEquipamento repositorioEquipamento = new RepositorioEquipamento();
+        RepositorioChamado repositorioChamado = new RepositorioChamado();
 
-        TelaEquipamento telaEquipamento = new TelaEquipamento();
+        TelaFabricante telaFabricante = new TelaFabricante(repositorioFabricante);
+        TelaEquipamento telaEquipamento = new TelaEquipamento(repositorioEquipamento, repositorioFabricante);
+        TelaChamado telaChamado = new TelaChamado(repositorioChamado, repositorioEquipamento);
 
-        TelaChamado telaChamado = new TelaChamado();        
+        TelaPrincipal telaPrincipal = new TelaPrincipal();
 
         while (true)
         {
-            string opcaoEscolhida = telaEquipamento.ApresentarMenu();
+            char opcaoPrincipal = telaPrincipal.ApresentarMenuPrincipal();
 
-            switch (opcaoEscolhida)
+            if (opcaoPrincipal == '1')
             {
-                case "1": telaEquipamento.CadastrarEquipamento(); break;
+                char opcaoEscolhida = telaFabricante.ApresentarMenu();
 
-                case "2": telaEquipamento.EditarEquipamento(); break;
+                switch (opcaoEscolhida)
+                {
+                    case '1': telaFabricante.CadastrarFabricante(); break;
 
-                case "3": telaEquipamento.ExcluirEquipamento(); break;
+                    case '2': telaFabricante.EditarFabricante(); break;
 
-                case "4": telaEquipamento.VisualizarEquipamentos(true); break;
-                                  
-                default:
-                    Console.WriteLine("Saindo do programa...");
-                    break;
+                    case '3': telaFabricante.ExcluirFabricante(); break;
+
+                    case '4': telaFabricante.VisualizarFabricantes(true); break;
+
+                    default: break;
+                }
             }
 
-            Console.ReadLine();
-        }
+            else if (opcaoPrincipal == '2')
+            {
+                char opcaoEscolhida = telaEquipamento.ApresentarMenu();
 
+                switch (opcaoEscolhida)
+                {
+                    case '1': telaEquipamento.CadastrarEquipamento(); break;
+
+                    case '2': telaEquipamento.EditarEquipamento(); break;
+
+                    case '3': telaEquipamento.ExcluirEquipamento(); break;
+
+                    case '4': telaEquipamento.VisualizarEquipamentos(true); break;
+
+                    default: break;
+                }
+            }
+
+            else if (opcaoPrincipal == '3')
+            {
+                char opcaoEscolhida = telaChamado.ApresentarMenu();
+
+                switch (opcaoEscolhida)
+                {
+                    case '1': telaChamado.CadastrarChamado(); break;
+
+                    case '2': telaChamado.EditarChamado(); break;
+
+                    case '3': telaChamado.ExcluirChamado(); break;
+
+                    case '4': telaChamado.VisualizarChamados(true); break;
+
+                    default: break;
+                }
+            }
+        }
     }
 }
