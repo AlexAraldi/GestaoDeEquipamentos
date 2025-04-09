@@ -19,5 +19,11 @@ internal class Chamado
         dataAbertura = DateTime.Now;
     }
 
+    public int ObterTempoDecorrido()
+    {
+        TimeSpan diferencaTempo = DateTime.Now .Subtract(dataAbertura);
+        return diferencaTempo.Days;
+    }
+    
 
 }
