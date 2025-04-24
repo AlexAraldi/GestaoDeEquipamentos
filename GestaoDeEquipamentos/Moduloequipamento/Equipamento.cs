@@ -4,11 +4,21 @@ namespace GestaoDeEquipamentos.ConsoleApp.ModuloEquipamento;
 
 public class Equipamento
 {
-    public int Id;
-    public string Nome;
-    public Fabricante Fabricante;
-    public decimal PrecoAquisicao;
-    public DateTime DataFabricacao;
+    public int Id { get; set; }
+    public string Nome { get; set; }
+    public Fabricante Fabricante { get; set; }
+    public decimal PrecoAquisicao { get; set; }
+    public DateTime DataFabricacao { get; private set; }
+
+    public string NumeroSerie
+    {
+        get
+        {
+            string tresPrimeirosCaracteres = Nome.Substring(0, 3).ToUpper();
+
+            return $"{tresPrimeirosCaracteres}-{Id}";
+        }
+    }
 
     public Equipamento(string nome, decimal precoAquisicao, DateTime dataFabricacao, Fabricante fabricante)
     {
@@ -18,10 +28,5 @@ public class Equipamento
         Fabricante = fabricante;
     }
 
-    public string ObterNumeroSerie()
-    {
-        string tresPrimeirosCaracteres = Nome.Substring(0, 3).ToUpper();
-
-        return $"{tresPrimeirosCaracteres}-{Id}";
-    }
+    
 }
